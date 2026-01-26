@@ -1,0 +1,11 @@
+# Tickets Skill Development
+
+# Default recipe - show available commands
+default:
+    @just --list
+
+# Deploy skill to ~/.claude/skills/tickets/
+deploy:
+    @echo "Deploying to ~/.claude/skills/tickets/"
+    cp -r src/* ~/.claude/skills/tickets/
+    @echo "Done."
