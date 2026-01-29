@@ -28,10 +28,14 @@ Claude creates and manages `tickets/` in your project with a clean directory str
 
 ## Installation
 
-Copy the `src/` contents to your Claude skills directory:
+```bash
+just install
+```
+
+To uninstall:
 
 ```bash
-cp -r src/* ~/.claude/skills/tickets/
+just uninstall
 ```
 
 ## Documentation

@@ -1,5 +1,6 @@
 ---
 name: tickets
+version: 0.2.0
 description: Manage project tickets via helper scripts - list, create, find, set status. Use when user mentions tickets. Run scripts directly; never search or glob for ticket.md files.
 allowed-tools:
   - Read
@@ -12,11 +13,11 @@ allowed-tools:
 
 | Query | Run exactly |
 |-------|-------------|
-| list / status / open / remaining | `~/.claude/skills/tickets/scripts/list-tickets.sh <tickets_path> [filter]` |
-| find / search | `~/.claude/skills/tickets/scripts/find-tickets.sh <tickets_path> "query"` |
-| set status / mark done | `~/.claude/skills/tickets/scripts/set-status.sh <tickets_path> <id> <status>` |
-| next ticket number | `~/.claude/skills/tickets/scripts/next-ticket.sh <tickets_path>` |
-| skill version | `cat ~/.claude/skills/tickets/VERSION` |
+| list / status / open / remaining | `~/.claude/skills/aminnaggar_tickets/scripts/list-tickets.sh <tickets_path> [filter]` |
+| find / search | `~/.claude/skills/aminnaggar_tickets/scripts/find-tickets.sh <tickets_path> "query"` |
+| set status / mark done | `~/.claude/skills/aminnaggar_tickets/scripts/set-status.sh <tickets_path> <id> <status>` |
+| next ticket number | `~/.claude/skills/aminnaggar_tickets/scripts/next-ticket.sh <tickets_path>` |
+| skill version | Read SKILL.md frontmatter `version` field |
 
 **Filters**: `draft`, `todo`, `current`, `done`, `open` (not done), `closed` (done)
 
@@ -30,14 +31,14 @@ Only read individual `ticket.md` files when detailed content is needed (acceptan
 
 ## Adding a New Ticket
 
-1. Run: `~/.claude/skills/tickets/scripts/next-ticket.sh /path/to/tickets`
+1. Run: `~/.claude/skills/aminnaggar_tickets/scripts/next-ticket.sh /path/to/tickets`
 2. Ask user for title, slug, description
 3. Create directory: `{number}_{slug}/`
 4. Create `ticket.md` with frontmatter (see [reference.md](reference.md))
 
 ## Adding a Sub-Ticket
 
-1. Run: `~/.claude/skills/tickets/scripts/next-ticket.sh /path/to/tickets <parent_id>`
+1. Run: `~/.claude/skills/aminnaggar_tickets/scripts/next-ticket.sh /path/to/tickets <parent_id>`
 2. Ask for title, slug, description
 3. Create directory: `{parent}{letter}_{slug}/`
 4. Set `parent` field to relative path to parent's ticket.md
@@ -46,7 +47,7 @@ Only read individual `ticket.md` files when detailed content is needed (acceptan
 
 Run exactly:
 ```bash
-~/.claude/skills/tickets/scripts/set-status.sh <tickets_path> <id> <status>
+~/.claude/skills/aminnaggar_tickets/scripts/set-status.sh <tickets_path> <id> <status>
 ```
 
 Valid statuses: `draft`, `todo`, `current`, `done`

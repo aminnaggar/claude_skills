@@ -29,7 +29,8 @@ tickets/
 ## Just Commands
 
 ```bash
-just deploy    # Deploy src/* to ~/.claude/skills/tickets/
+just install   # Install skill to ~/.claude/skills/aminnaggar_tickets/
+just uninstall # Remove skill
 ```
 
 ## About the Skill

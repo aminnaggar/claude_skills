@@ -1,12 +1,12 @@
-# Tickets Skill Development
+# ADR Skill Development
 
-SKILL_DIR := "~/.claude/skills/aminnaggar_tickets"
+SKILL_DIR := "~/.claude/skills/aminnaggar_adrs"
 
 # Default recipe - show available commands
 default:
     @just --list
 
-# Install skill to ~/.claude/skills/aminnaggar_tickets/
+# Install skill to ~/.claude/skills/aminnaggar_adrs/
 install:
     #!/bin/bash
     OLD_VERSION=""
